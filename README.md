@@ -1,7 +1,7 @@
 Clockwork-Refresher
 ===================
 
-Refreshing code for developers.
+Saving the Developers from spamming server restart.
 
 Install
 ===================
@@ -17,3 +17,7 @@ When you didn't install the module, or are running linux, you can use the chat c
 The pluginname is the name of the folder (e.G. 'refresher')
 
 This plugin isn't refreshing Clockwork core files.
+
+Already created items aren't automatically updated. You need to give yourself the item again to test the update.
+
+Variables created in runtime are lost when refreshing because it resets the plugin/schema. Use PLUGIN:Refreshed(OldPlugin) to retrieve variables that you still require.
