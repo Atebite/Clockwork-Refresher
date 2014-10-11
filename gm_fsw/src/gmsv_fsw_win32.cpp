@@ -111,14 +111,11 @@ GMOD_MODULE_OPEN()
 	LUA->PushSpecial( GarrysMod::Lua::SPECIAL_GLOB );	// Push global table
 	LUA->PushString( "FSWGetDirectory" );					// Push Name
 	LUA->PushCFunction( GetDirectory );			// Push function
-	LUA->SetTable( -3 );								// Set the table 
-	LUA->Pop();		
+	LUA->SetTable( -3 );								// Set the table 		
 
-	LUA->PushSpecial( GarrysMod::Lua::SPECIAL_GLOB );	// Push global table
 	LUA->PushString( "FSWPollChanged" );					// Push Name
 	LUA->PushCFunction( FSWPollChanged );			// Push function
 	LUA->SetTable( -3 );								// Set the table 
-	LUA->Pop();	
 
 	string directory = ExePath();
 	gcnew FSWatcher(gcnew String(directory.c_str()));
